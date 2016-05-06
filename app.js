@@ -31,6 +31,12 @@ helloBot.add('/profile',  [
 server.use(helloBot.verifyBotFramework({ appId: 'you id', appSecret: 'your secret' }));
 server.post('/v1/messages', helloBot.listen());
 
+// Serve a static web page
+server.get(/.*/, restify.serveStatic({
+	'directory': '.',
+	'default': 'index.html'
+}));
+
 server.listen(process.env.port, function () {
     console.log('%s listening to %s', server.name, server.url); 
 });
