@@ -28,7 +28,7 @@ helloBot.add('/profile',  [
     }
 ]);
 
-server.use(helloBot.verifyBotFramework({ appId: 'you id', appSecret: 'your secret' }));
+server.use(helloBot.verifyBotFramework({ appId: 'Ihavenoideawhattoputhere', appSecret: '1d29571daa80409494745524a5ecaf45' }));
 server.post('/v1/messages', helloBot.listen());
 
 // Serve a static web page
